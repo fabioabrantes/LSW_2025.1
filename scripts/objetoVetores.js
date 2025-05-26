@@ -108,3 +108,5 @@ let userX  = {
   ensinar: imprimirEnsinar
 }
 userX.ensinar();
+let numero = 10.890909;
+let numero2 = Math.

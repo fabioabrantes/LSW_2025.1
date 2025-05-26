@@ -79,3 +79,13 @@ function exemeploComTudo() {
   console.log("Fim da função");
 }
 exemeploComTudo() ;
+
+if (true) {
+  var res = 10;
+  let b = 20;
+}
+console.log(res); // ✅ 10 (escopo de função)
+
+var nome22 = "Ana";
+var nome22 = "Lucas"; // OK
+var nome22 = "ddd"; // OK

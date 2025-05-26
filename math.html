@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="math.css" />
+
+    <title>gerador de numero aleatorio</title>
+  </head>
+  <body>
+    <h2>🎲 Gerador de Número Aleatório Inteiro</h2>
+
+    <div>
+      <label for="min">Mínimo:</label>
+      <input type="number" id="min" placeholder="Ex: 1" />
+    </div>
+   
+    <div>
+      <label for="max">Máximo:</label>
+      <input type="number" id="max" placeholder="Ex: 10" />
+    </div>
+    <br />
+
+    <button onclick="gerarNumeroAleatorio()">Gerar Número</button>
+
+    <p id="resultado"></p>
+
+    <script src="./scripts/metodos.js"></script>
+  </body>
+</html>
