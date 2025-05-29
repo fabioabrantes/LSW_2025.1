@@ -7,14 +7,17 @@ form.addEventListener("submit", function (eveent) {
   const fieldEmail = String(document.getElementById("email").value);
   const fieldIdade = document.getElementById("idade").value;
   const fieldInteresses = String(document.getElementById("interesses").value);
-
-  let arrayNome = fieldNome.trim().split();
-
-// aqui esta dando primeira letra maiuscual
+  
+  let arrayNome = fieldNome.trim().split(' ');
+  console.log(arrayNome);
+  // aqui esta dando primeira letra maiuscual
   for (let index = 0; index < arrayNome.length; index++) {
-    arrayNome[index] = arrayNome[index].charAt(0).toUpperCase() +  arrayNome[index].split(1);
+    arrayNome[index] =
+      arrayNome[index][0].toUpperCase() +
+      arrayNome[index].slice(1).toLowerCase();
   }
-  const nomeFormated = arrayNome.join();
+
+  const nomeFormated = arrayNome.join(" ");
 
   const emailFormattedSemEspaco = fieldEmail.trim();
   const emailFormattedTotalmente = emailFormattedSemEspaco.toLocaleLowerCase();
@@ -23,8 +26,9 @@ form.addEventListener("submit", function (eveent) {
 
   const interessesFormatted = fieldInteresses.trim().split(",");
   for (let index = 0; index < interessesFormatted.length; index++) {
-    interessesFormatted[index].trim();
+    interessesFormatted[index] = interessesFormatted[index].trim();
   }
+
   const user = {
     nome: nomeFormated,
     email: emailFormattedTotalmente,
