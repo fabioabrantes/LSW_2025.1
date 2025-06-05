@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #e2e2e2;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input,
+button {
+  padding: 8px;
+  font-size: 1em;
+}
+
+#resultado p {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}

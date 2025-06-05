@@ -17,7 +17,7 @@ form.addEventListener("submit", function (eveent) {
       arrayNome[index].slice(1).toLowerCase();
   }
 
-  const nomeFormated = arrayNome.join(" ");
+  const nomeFormated = arrayNome.join(',');
 
   const emailFormattedSemEspaco = fieldEmail.trim();
   const emailFormattedTotalmente = emailFormattedSemEspaco.toLocaleLowerCase();
