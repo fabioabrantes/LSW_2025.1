@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acesso Direto à DOM</title>
+    <style>
+      .caixa-original {
+        border: 1px solid gray;
+      }
+      .caixa-destacada {
+        border: 2px dashed red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="imagem"
+      src="https://via.placeholder.com/150"
+      alt="Imagem exemplo"
+    />
+    <input id="nome" type="text" value="João" />
+    <input id="aceita" type="checkbox" checked />
+    <div id="caixa" class="caixa-original">Conteúdo da caixa</div>
+    <script>
+      // Acessando elementos
+      const imagem = document.getElementById("imagem");
+      const nomeInput = document.getElementById("nome");
+      const aceitaCheckbox = document.getElementById("aceita");
+      const caixa = document.getElementById("caixa");
+      // 1. style
+      caixa.style.backgroundColor = "lightblue";
+      caixa.style.padding = "10px";
+      // 2. src
+      imagem.src = "https://github.com/fabioabrantes.png";
+      // 3. className
+      caixa.className = "caixa-destacada";
+      // 4. value
+      nomeInput.value = "Maria";
+      // 5. checked
+      aceitaCheckbox.checked = false;
+    </script>
+  </body>
+</html>

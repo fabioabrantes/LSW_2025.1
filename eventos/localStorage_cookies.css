@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark {
+  background: #222;
+  color: white;
+}
+
+label,
+input,
+select {
+  display: block;
+  margin-bottom: 1rem;
+}

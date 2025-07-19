@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo de Propagação</title>
+    <style>
+      .grandparent,
+      .parent,
+      .child {
+        padding: 30px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      .grandparent {
+        background: #f9c74f;
+      }
+      .parent {
+        background: #90be6d;
+      }
+      .child {
+        background: #f94144;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grandparent">
+      Avô
+      <div class="parent">
+        Pai
+        <div class="child">Filho</div>
+      </div>
+    </div>
+
+    <script>
+      const grandparent = document.querySelector(".grandparent");
+      const parent = document.querySelector(".parent");
+      const child = document.querySelector(".child");
+
+      grandparent.addEventListener("click", (event) => {
+        alert("Clique no Avô", event);
+      });
+
+      parent.addEventListener("click", () => {
+        alert("Clique no Pai");
+        event.stopPropagation();
+
+      });
+
+      child.addEventListener("click", () => {
+        alert("Clique no Filho");
+      });
+    </script>
+  </body>
+</html>

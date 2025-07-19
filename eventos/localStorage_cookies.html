@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="localStorage_cookies.css" />
+    <title>Preferências do Usuário</title>
+  </head>
+  <body>
+    <h1>Configurações</h1>
+    <div>
+      <label>
+        Nome:
+        <input type="text" id="username" placeholder="Digite seu nome" />
+      </label>
+
+      <label>
+        Tema:
+        <select id="theme-select">
+          <option value="light">Claro</option>
+          <option value="dark">Escuro</option>
+        </select>
+      </label>
+
+      <button id="save-btn">Salvar Preferências</button>
+    </div>
+    <script src="localStorage_cookies.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparando on vs addEventListener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comparação de Eventos</h1>
+
+  <button id="btnOn">Usando .on</button>
+  <button id="btnAddListener">Usando addEventListener</button>
+
+  <script>
+    const btnOn = document.getElementById('btnOn');
+    const btnAddListener = document.getElementById('btnAddListener');
+
+    // --- Usando propriedade .onclick (substitui se adicionar de novo)
+    btnOn.onclick = function() {
+      alert('Primeira ação com onclick');
+    };
+
+    // Se você definir outro depois, vai sobrescrever o anterior!
+    btnOn.onclick = function() {
+      alert('Segunda ação com onclick (sobrescreveu a primeira!)');
+    };
+
+    // --- Usando addEventListener (permite adicionar vários ouvintes sem sobrescrever)
+    btnAddListener.addEventListener('click', function() {
+      alert('Primeira ação com addEventListener');
+    });
+
+    btnAddListener.addEventListener('click', function() {
+      alert('Segunda ação com addEventListener (não sobrescreveu a primeira!)');
+    });
+  </script>
+
+</body>
+</html>

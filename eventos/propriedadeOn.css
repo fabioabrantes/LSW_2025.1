@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+input {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+}
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}

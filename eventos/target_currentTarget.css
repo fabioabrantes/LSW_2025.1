@@ -1,0 +1,18 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f0f0f0;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+span {
+  background: yellow;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
