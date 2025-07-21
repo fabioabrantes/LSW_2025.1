@@ -39,10 +39,9 @@ h1 {
   font-size: 16px;
 }
 
-#add-task-btn {
+.btn {
   width: 100%;
   padding: 10px;
-  background: #4caf50;
   color: white;
   border: none;
   border-radius: 6px;
@@ -51,8 +50,18 @@ h1 {
   transition: background 0.3s;
 }
 
+#add-task-btn {
+  background: #7f4caf;
+}
 #add-task-btn:hover {
-  background: #267129;
+  background: #4a0689;
+}
+
+#save-tasks-btn {
+  background: #4caf50;
+}
+#save-tasks-btn:hover {
+  background: #036406;
 }
 
 #task-list {
