@@ -1,6 +1,7 @@
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task-btn");
 const saveTasksBtn = document.getElementById("save-tasks-btn");
+const deleteTasksBtn = document.getElementById("delete-tasks-btn");
 
 const taskList = document.getElementById("task-list");
 
@@ -47,8 +48,14 @@ addTaskBtn.addEventListener("click", () => {
 
 saveTasksBtn.addEventListener("click", () => {
   localStorage.setItem("tarefasKey", JSON.stringify(activities));
+  renderTasks();
 });
 
+deleteTasksBtn.addEventListener("click", () => {
+  localStorage.removeItem("tarefasKey");
+  activities = [];
+  renderTasks();
+});
 // Carrega tarefas do localStorage ao iniciar
 function loadTasks() {
   const stored = localStorage.getItem("tarefasKey");

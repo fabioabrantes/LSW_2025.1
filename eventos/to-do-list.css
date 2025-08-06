@@ -48,6 +48,7 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
+  margin-top: 5px;
 }
 
 #add-task-btn {
@@ -62,6 +63,14 @@ h1 {
 }
 #save-tasks-btn:hover {
   background: #036406;
+}
+
+#delete-tasks-btn {
+  background: #dd6767;
+}
+
+#delete-tasks-btn:hover {
+  background: #b23737;
 }
 
 #task-list {
@@ -87,7 +96,7 @@ h1 {
 
 .done {
   text-decoration: line-through;
-  color: gray;
+  color: rgb(108, 15, 15);
 }
 
 .delete-btn {
